@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sultan Akoushali | Data Analyst</title>
+<meta name="description" content="Data Analyst portfolio: Excel, Power BI, SQL and Python projects by Sultan Akoushali.">
+<meta property="og:title" content="Sultan Akoushali | Data Analyst">
+<meta property="og:description" content="Dashboards and analysis projects in Excel, Power BI, SQL and Python.">
+<meta property="og:image" content="https://sultan-akoushali.github.io/assets/cover.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b111c; --bg2:#0f1724; --card:#141e31; --card2:#18233a; --line:#24304a;
+  --text:#e8edf5; --muted:#9aa6b8; --dim:#6b778b;
+  --teal:#2dd4bf; --gold:#f5b942; --blue:#7aa2ff;
+  --r:18px; --max:1080px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:rgba(11,17,28,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.2px}
+.mono{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(135deg,var(--teal),#1e9e8f);color:#06201c;font-weight:800;font-size:14px}
+.links{display:flex;gap:26px;font-size:14px;color:var(--muted)}
+.links a:hover{color:var(--text)}
+
+/* hero */
+.hero{padding:96px 0 72px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:-200px -100px auto auto;width:640px;height:640px;background:radial-gradient(circle,rgba(45,212,191,.16),transparent 65%);pointer-events:none}
+.kicker{color:var(--teal);font-weight:600;font-size:13px;letter-spacing:3px;text-transform:uppercase}
+h1{font-size:clamp(40px,6vw,68px);line-height:1.05;font-weight:800;letter-spacing:-1.5px;margin:14px 0 18px}
+h1 span{color:var(--teal)}
+.lead{font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:640px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:12px;font-weight:600;font-size:15px;border:1px solid var(--line);background:var(--card);transition:.15s}
+.btn:hover{border-color:var(--teal);transform:translateY(-1px)}
+.btn.primary{background:var(--teal);color:#06201c;border-color:var(--teal)}
+.btn svg{width:18px;height:18px}
+.stats{display:flex;flex-wrap:wrap;gap:36px;margin-top:56px}
+.stat b{display:block;font-size:28px;font-weight:800}
+.stat span{color:var(--dim);font-size:13px}
+
+/* sections */
+section{padding:72px 0;border-top:1px solid var(--line)}
+h2{font-size:30px;font-weight:800;letter-spacing:-.5px;margin-bottom:8px}
+.sub{color:var(--muted);margin-bottom:36px}
+
+/* project */
+.project{display:grid;grid-template-columns:1fr;gap:0;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.project img{width:100%;height:auto;display:block;border-bottom:1px solid var(--line)}
+.pbody{display:grid;grid-template-columns:1fr 1fr;gap:8px 40px;align-items:start}
+.pbody .left,.pbody .right{min-width:0}
+.pbody{padding:32px}
+.tag{display:inline-block;font-size:12px;font-weight:600;color:var(--teal);background:rgba(45,212,191,.1);border:1px solid rgba(45,212,191,.25);padding:4px 10px;border-radius:99px;margin-bottom:14px}
+.pbody h3{font-size:23px;line-height:1.25;margin-bottom:10px}
+.pbody p{color:var(--muted);font-size:15px;margin-bottom:18px}
+.pbody ul{list-style:none;margin-bottom:22px}
+.pbody li{font-size:14px;color:var(--text);padding:6px 0 6px 22px;position:relative;border-bottom:1px dashed var(--line)}
+.pbody li.h:before{display:none}
+.pbody li:before{content:"";position:absolute;left:4px;top:14px;width:7px;height:7px;border-radius:2px;background:var(--gold)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:24px}
+.chip{font-size:12px;color:var(--muted);background:var(--bg2);border:1px solid var(--line);padding:4px 10px;border-radius:8px}
+.plinks{display:flex;gap:10px;flex-wrap:wrap}
+.plinks .btn{padding:10px 16px;font-size:14px}
+.next{margin-top:18px;padding:22px 26px;border:1px dashed var(--line);border-radius:var(--r);color:var(--dim);font-size:14px}
+
+/* skills */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.card h4{font-size:15px;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.dot{width:9px;height:9px;border-radius:3px;background:var(--teal)}
+.card p{font-size:14px;color:var(--muted)}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.about p{color:var(--muted);margin-bottom:14px}
+.about p strong{color:var(--text);font-weight:600}
+.facts{display:grid;gap:12px}
+.fact{display:flex;justify-content:space-between;gap:16px;padding:14px 18px;background:var(--card);border:1px solid var(--line);border-radius:12px;font-size:14px}
+.fact span{color:var(--dim)}
+
+/* certs */
+.certs{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.cert{display:flex;flex-direction:column;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;transition:.15s}
+.cert:hover{border-color:var(--teal)}
+.cert small{color:var(--dim);font-size:13px}
+.cert b{font-size:17px}
+.cert em{font-style:normal;color:var(--teal);font-size:13px;font-weight:600;margin-top:8px}
+
+/* contact */
+.contact{text-align:center}
+.contact .cta{justify-content:center}
+footer{padding:28px 0;border-top:1px solid var(--line);color:var(--dim);font-size:13px;text-align:center}
+
+@media (max-width:860px){
+  .links{display:none}
+  .pbody{grid-template-columns:1fr}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .about,.certs{grid-template-columns:1fr}
+  .hero{padding:64px 0 48px}
+}
+@media (max-width:480px){.grid{grid-template-columns:1fr}.pbody{padding:24px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#"><span class="mono">SA</span>Sultan Akoushali</a>
+    <div class="links">
+      <a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#about">About</a><a href="#certs">Certificates</a><a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">Data Analyst</div>
+    <h1>I turn raw data into<br><span>clear decisions.</span></h1>
+    <p class="lead">Dashboards and analysis built with Excel, Power BI, SQL and Python. I focus on the business question first, then the tool that answers it best.</p>
+    <div class="cta">
+      <a class="btn primary" href="#projects">View projects</a>
+      <a class="btn" href="https://www.linkedin.com/in/sultan-akoushali" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>LinkedIn</a>
+      <a class="btn" href="https://github.com/sultan-akoushali" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.82-.26.82-.58v-2.03c-3.34.73-4.04-1.6-4.04-1.6-.55-1.4-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .3"/></svg>GitHub</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>22,805</b><span>bookings analysed</span></div>
+      <div class="stat"><b>2</b><span>professional certificates</span></div>
+      <div class="stat"><b>3</b><span>languages: Arabic, Turkish, English</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Projects</h2>
+    <p class="sub">End-to-end work: from raw data to a dashboard someone can act on.</p>
+
+    <article class="project">
+      <a href="https://github.com/sultan-akoushali/hotel-performance-dashboard-excel" target="_blank" rel="noopener"><img src="assets/dashboard.png" alt="Hotel performance dashboard built in Excel" loading="lazy"></a>
+      <div class="pbody">
+        <div class="left">
+        <span class="tag">Excel · Interactive dashboard</span>
+        <h3>Hotel Performance Dashboard</h3>
+        <p>Two properties, three years, 22,805 bookings. One slicer updates every KPI card and chart: revenue, occupancy, ADR, RevPAR, cancellations and direct-booking share.</p>
+        <div class="chips">
+          <span class="chip">Excel Tables</span><span class="chip">XLOOKUP</span><span class="chip">SUMIFS</span><span class="chip">PivotTables</span><span class="chip">GETPIVOTDATA</span><span class="chip">Slicers</span>
+        </div>
+        <div class="plinks">
+          <a class="btn primary" href="https://github.com/sultan-akoushali/hotel-performance-dashboard-excel" target="_blank" rel="noopener">Case study &amp; files</a>
+        </div>
+        </div>
+        <div class="right">
+        <ul>
+          <li style="color:var(--dim);border-bottom:1px solid var(--line);padding-left:0" class="h">What the data showed</li>
+          <li>RevPAR up 13.3% while ADR rose only 4.6%: growth came from occupancy</li>
+          <li>Bookings made 91+ days ahead cancel 35% of the time vs 20% last-minute</li>
+          <li>Direct website share of revenue grew from 15.3% to 24.9%</li>
+        </ul>
+        </div>
+      </div>
+    </article>
+
+    <div class="next">Next up: a Power BI project with a data model and DAX measures, and a SQL analysis project. Follow along on LinkedIn.</div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <p class="sub">The toolkit I use, and what I use it for.</p>
+    <div class="grid">
+      <div class="card"><h4><span class="dot"></span>Excel</h4><p>Tables, XLOOKUP, SUMIFS, PivotTables, GETPIVOTDATA, Power Query, interactive dashboards.</p></div>
+      <div class="card"><h4><span class="dot" style="background:var(--gold)"></span>Power BI</h4><p>Interactive reports and dashboards. Currently preparing for the PL-300 certification.</p></div>
+      <div class="card"><h4><span class="dot" style="background:var(--blue)"></span>SQL</h4><p>Querying, joins, aggregations and data cleaning in BigQuery.</p></div>
+      <div class="card"><h4><span class="dot" style="background:#f87171"></span>Python</h4><p>pandas for cleaning, exploring and preparing data.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about">
+    <div>
+      <h2>About</h2>
+      <p>I'm a data analyst based in Türkiye. Before moving into data, I spent <strong>5+ years in hospitality operations</strong>, working daily with occupancy, reservations and performance reports. That taught me how numbers are created on the ground, and what decision-makers actually need from them.</p>
+      <p>Today I build dashboards and analyses that answer <strong>real business questions</strong>: where revenue comes from, what it costs, and what to change next.</p>
+    </div>
+    <div class="facts">
+      <div class="fact"><span>Based in</span>Trabzon, Türkiye</div>
+      <div class="fact"><span>Education</span>B.A. Tourism Management, Ondokuz Mayıs University</div>
+      <div class="fact"><span>Languages</span>Arabic · Turkish · English</div>
+      <div class="fact"><span>Open to</span>Data Analyst and BI roles</div>
+    </div>
+  </div>
+</section>
+
+<section id="certs">
+  <div class="wrap">
+    <h2>Certificates</h2>
+    <p class="sub">Click to verify on Coursera.</p>
+    <div class="certs">
+      <a class="cert" href="https://www.coursera.org/account/accomplishments/specialization/ZHQF7XM9WX2Y" target="_blank" rel="noopener">
+        <small>Google · 2026</small><b>Google Data Analytics Professional Certificate</b>
+        <span style="color:var(--muted);font-size:14px">Asking, preparing, processing, analysing and visualising data with spreadsheets, SQL, Python and Tableau.</span>
+        <em>Verify credential →</em></a>
+      <a class="cert" href="https://www.coursera.org/account/accomplishments/specialization/MZX3XIJE3IAM" target="_blank" rel="noopener">
+        <small>Macquarie University · 2026</small><b>Excel Skills for Business Specialization</b>
+        <span style="color:var(--muted);font-size:14px">Advanced formulas, data validation, dashboards, automation and forecasting models.</span>
+        <em>Verify credential →</em></a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Let's talk</h2>
+    <p class="sub">Open to Data Analyst and BI opportunities. The fastest way to reach me is LinkedIn.</p>
+    <div class="cta">
+      <a class="btn primary" href="https://www.linkedin.com/in/sultan-akoushali" target="_blank" rel="noopener">Message me on LinkedIn</a>
+      <a class="btn" href="mailto:soltan.akoushali@gmail.com">soltan.akoushali@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Sultan Akoushali</footer>
+</body>
+</html>
