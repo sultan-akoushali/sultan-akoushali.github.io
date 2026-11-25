@@ -134,7 +134,8 @@ footer{padding:28px 0;border-top:1px solid var(--line);color:var(--dim);font-siz
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.82-.26.82-.58v-2.03c-3.34.73-4.04-1.6-4.04-1.6-.55-1.4-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .3"/></svg>GitHub</a>
     </div>
     <div class="stats">
-      <div class="stat"><b>22,805</b><span>bookings analysed</span></div>
+      <div class="stat"><b>2</b><span>end-to-end projects</span></div>
+      <div class="stat"><b>193</b><span>countries analysed</span></div>
       <div class="stat"><b>2</b><span>professional certificates</span></div>
       <div class="stat"><b>3</b><span>languages: Arabic, Turkish, English</span></div>
     </div>
@@ -145,6 +146,31 @@ footer{padding:28px 0;border-top:1px solid var(--line);color:var(--dim);font-siz
   <div class="wrap">
     <h2>Projects</h2>
     <p class="sub">End-to-end work: from raw data to a dashboard someone can act on.</p>
+
+    <article class="project" style="margin-bottom:22px">
+      <a href="https://github.com/sultan-akoushali/the-silent-tax-power-bi" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/sultan-akoushali/the-silent-tax-power-bi/main/images/01_overview.png" alt="The Silent Tax: Power BI inflation report" loading="lazy"></a>
+      <div class="pbody">
+        <div class="left">
+        <span class="tag">Power BI · Data model · DAX</span>
+        <h3>The Silent Tax: How Inflation Eats Your Money</h3>
+        <p>65 years of inflation for 193 countries, plus a monthly deep dive into Türkiye. Built from scratch: Power Query cleaning, a star schema with a DAX calendar, 25 measures and a four-page report with a "what is my money worth" calculator.</p>
+        <div class="chips">
+          <span class="chip">Power Query</span><span class="chip">Unpivot</span><span class="chip">Star schema</span><span class="chip">CALCULATE</span><span class="chip">RANKX</span><span class="chip">PRODUCTX</span><span class="chip">What-if parameter</span>
+        </div>
+        <div class="plinks">
+          <a class="btn primary" href="https://github.com/sultan-akoushali/the-silent-tax-power-bi" target="_blank" rel="noopener">Case study &amp; .pbix</a>
+        </div>
+        </div>
+        <div class="right">
+        <ul>
+          <li style="color:var(--dim);border-bottom:1px solid var(--line);padding-left:0" class="h">What the data showed</li>
+          <li>83% of countries had double-digit inflation in 1974, 34.6% in 2022</li>
+          <li>2018–2025: prices multiplied 10.2× in Türkiye vs 1.08× in Switzerland</li>
+          <li>Türkiye's rates stayed below inflation until mid-2023; the peak was 85.51% in Oct 2022</li>
+        </ul>
+        </div>
+      </div>
+    </article>
 
     <article class="project">
       <a href="https://github.com/sultan-akoushali/hotel-performance-dashboard-excel" target="_blank" rel="noopener"><img src="assets/dashboard.png" alt="Hotel performance dashboard built in Excel" loading="lazy"></a>
@@ -171,7 +197,7 @@ footer{padding:28px 0;border-top:1px solid var(--line);color:var(--dim);font-siz
       </div>
     </article>
 
-    <div class="next">Next up: a Power BI project with a data model and DAX measures, and a SQL analysis project. Follow along on LinkedIn.</div>
+    <div class="next">Next up: a SQL analysis project, then Power BI connected to SQL. Follow along on LinkedIn.</div>
   </div>
 </section>
 
@@ -181,7 +207,7 @@ footer{padding:28px 0;border-top:1px solid var(--line);color:var(--dim);font-siz
     <p class="sub">The toolkit I use, and what I use it for.</p>
     <div class="grid">
       <div class="card"><h4><span class="dot"></span>Excel</h4><p>Tables, XLOOKUP, SUMIFS, PivotTables, GETPIVOTDATA, Power Query, interactive dashboards.</p></div>
-      <div class="card"><h4><span class="dot" style="background:var(--gold)"></span>Power BI</h4><p>Interactive reports and dashboards. Currently preparing for the PL-300 certification.</p></div>
+      <div class="card"><h4><span class="dot" style="background:var(--gold)"></span>Power BI</h4><p>Power Query, star-schema modeling and DAX (CALCULATE, RANKX, PRODUCTX, time intelligence). Preparing for PL-300.</p></div>
       <div class="card"><h4><span class="dot" style="background:var(--blue)"></span>SQL</h4><p>Querying, joins, aggregations and data cleaning in BigQuery.</p></div>
       <div class="card"><h4><span class="dot" style="background:#f87171"></span>Python</h4><p>pandas for cleaning, exploring and preparing data.</p></div>
     </div>
@@ -196,7 +222,7 @@ footer{padding:28px 0;border-top:1px solid var(--line);color:var(--dim);font-siz
       <p>Today I build dashboards and analyses that answer <strong>real business questions</strong>: where revenue comes from, what it costs, and what to change next.</p>
     </div>
     <div class="facts">
-      <div class="fact"><span>Based in</span>Trabzon, Türkiye</div>
+      <div class="fact"><span>Based in</span>Antalya, Türkiye</div>
       <div class="fact"><span>Education</span>B.A. Tourism Management, Ondokuz Mayıs University</div>
       <div class="fact"><span>Languages</span>Arabic · Turkish · English</div>
       <div class="fact"><span>Open to</span>Data Analyst and BI roles</div>
